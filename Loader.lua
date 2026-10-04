@@ -1,16 +1,15 @@
-if (getgenv().UC_LOADED) then
-	return;
-end;
-getgenv().UC_LOADED = true;
+if (scriptObj:UCLOADED)()
+	then
+	
+	  if game.GameId == 6035872082 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/agnorismajli111-debug/Rivals-Xilos-/refs/heads/main/Loader.lua"))()
+elseif game.GameId == 123974602339071 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/agnorismajli111-debug/Baseplate-Xilos-/refs/heads/main/Loader.lua"))()
+else
+    warn("Unsupported GameId: " .. tostring(game.GameId))
+	end
 
-if (identifyexecutor() == "Wave") then
-	getgenv().gethui = function()
-		return game:GetService("CoreGui");
-	end;	
-end;
-
-if (game.GameId == 6035872082) then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/agnorismajli111-debug/Xilos-/refs/heads/main/Rivals%20loader.lua"))();
-elseif (game.GameId == 123974602339071) then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/agnorismajli111-debug/Xilos-/refs/heads/main/Baseplate%20Loader.lua"))();
-end;
+	print ("ran successfully")
+	     or 
+	print ("didnt ran successfully")
+	
